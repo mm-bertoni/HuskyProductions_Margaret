@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client'
 //import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Bootstrap React for a Navbar
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import FilmForm from "./components/filmForm";
 
-createRoot(document.getElementById('root')).render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
   <StrictMode>
-   
-  </StrictMode>,
-)
+    <FilmForm />
+  </StrictMode>
+);
