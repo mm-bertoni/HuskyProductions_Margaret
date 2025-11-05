@@ -1,13 +1,16 @@
-import Button from 'react-bootstrap/Button';
-import BootstrapCard from 'react-bootstrap/Card';  // Rename the import
+import Button from "react-bootstrap/Button";
+import BootstrapCard from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
-function Card({ title, image }) {  // Also fix: should be one object, not two
+function Card({ title, image, link }) {
   return (
-    <BootstrapCard style={{ width: '20rem' }}>
+    <BootstrapCard style={{ width: "20rem" }}>
       <BootstrapCard.Img variant="top" src={image} />
       <BootstrapCard.Body>
         <BootstrapCard.Title>{title}</BootstrapCard.Title>
-        <Button variant="primary">Go somewhere</Button>
+        <Link to={link}>
+          <Button variant="primary">Click Here</Button>
+        </Link>
       </BootstrapCard.Body>
     </BootstrapCard>
   );

@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import FilmForm from "../filmForm";
+import FilmForm from "../Forms/filmForm";
 import FilmStatAggregator from '../filmStatAggregator';
 import Navbar from '../Navbar';  // Add navbar
 
