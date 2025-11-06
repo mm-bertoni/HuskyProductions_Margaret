@@ -18,10 +18,6 @@ function filmsDB(){
 
   // Get count of All Films
 
-  // Get count of Short Films (NICE TO HAVE)
-
-  // Get count of Feature Films (NICE TO HAVE)
-
   // Add new Film
 
   // Delete Film by ID

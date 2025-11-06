@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+import ReviewForm from '../Forms/reviewForm';
 
 export default function FilmToReview({id, director, title, genre, type, website, status}){
     return(
@@ -31,7 +31,7 @@ export default function FilmToReview({id, director, title, genre, type, website,
                     </span>
                 </div>
                 <div>
-                    
+                    <ReviewForm/>
                 </div>
             </Container>
         </>
