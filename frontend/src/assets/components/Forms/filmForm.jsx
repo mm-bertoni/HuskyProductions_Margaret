@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import {useState} from "react";
 
 export default function FilmForm(){
-    const [application, setApplication] = useState({director:"", title:"",type:"",genre:"",link:""});
+    const [application, setApplication] = useState({director:"", title:"",genre:"",link:""});
     const onSubmit = (evt) => {
         evt.preventDefault();
         console.log("On Submit: ", application);
