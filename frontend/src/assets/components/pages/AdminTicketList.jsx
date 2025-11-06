@@ -193,16 +193,16 @@ export default function AdminTicketList() {
               <table className="w-full">
                 <thead className="bg-gray-50 border-b border-gray-200">
                   <tr>
-                    <th className="text-left py-3 px-6 text-sm font-semibold text-gray-700">
+                    <th className="text-left py-8 px-6 text-sm font-semibold text-gray-700">
                       Name
                     </th>
-                    <th className="text-center py-3 px-6 text-sm font-semibold text-gray-700">
+                    <th className="text-center py-8 px-6 text-sm font-semibold text-gray-700">
                       Number of Tickets
                     </th>
-                    <th className="text-right py-3 px-6 text-sm font-semibold text-gray-700">
+                    <th className="text-right py-8 px-6 text-sm font-semibold text-gray-700">
                       Total Cost
                     </th>
-                    <th className="text-right py-3 px-6 text-sm font-semibold text-gray-700">
+                    <th className="text-right py-8 px-6 text-sm font-semibold text-gray-700">
                       Actions
                     </th>
                   </tr>
@@ -213,18 +213,18 @@ export default function AdminTicketList() {
                       key={ticket._id}
                       className="hover:bg-gray-50 transition"
                     >
-                      <td className="py-4 px-6 text-sm text-gray-900 font-medium">
+                      <td className="py-8 px-6 text-sm text-gray-900 font-medium">
                         {ticket.name || "N/A"}
                       </td>
-                      <td className="py-4 px-6 text-sm text-gray-900 text-center">
+                      <td className="py-8 px-6 text-sm text-gray-900 text-center">
                         <span className="inline-flex items-center justify-center min-w-8 h-8 px-3 rounded-full bg-blue-100 text-blue-800 font-semibold">
                           {ticket.numTickets || 0}
                         </span>
                       </td>
-                      <td className="py-4 px-6 text-sm text-gray-900 text-right font-semibold">
+                      <td className="py-8 px-6 text-sm text-gray-900 text-right font-semibold">
                         ${(ticket.totalCost || 0).toFixed(2)}
                       </td>
-                      <td className="py-4 px-6 text-right">
+                      <td className="py-8 px-6 text-right">
                         <button
                           onClick={() => handleDelete(ticket._id)}
                           disabled={deleting === ticket._id}

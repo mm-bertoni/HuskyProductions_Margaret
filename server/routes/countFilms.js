@@ -1,11 +1,11 @@
 import express from "express";
-import FilmDB from "../FilmsDB";
+import FilmsDB from "../FilmsDB.js";
 // Router to get the list of all Films
 const router = express.Router();
 
 router.get("/countFilms", async(req, res)=>{
     try {
-        const total = await FilmDB.countFilms();
+        const total = await FilmsDB.countFilms();
         res.json({
             filmCount: total,
         });
