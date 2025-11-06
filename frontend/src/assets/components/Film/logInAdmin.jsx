@@ -2,6 +2,7 @@ import Container from "react-bootstrap/esm/Container";
 import {useState} from 'react';
 
 import AdminForm from "../Forms/adminForm";
+import FilmList from "../Film/filmReviewList";
 
 export default function LoginAdmin(){
 
@@ -43,6 +44,7 @@ export default function LoginAdmin(){
             <>
                 <Container>
                     <h1>Review Films</h1>
+                    <FilmList/>
                 </Container>
             </>
             
