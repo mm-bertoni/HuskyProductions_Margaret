@@ -7,7 +7,12 @@ const router = express.Router();
 router.get("/films", async (req, res)=>{
     // Try to get the films that are NOT reviewed
     try {
-        const films = await FilmsDB.getFilms({status:null});
+        const films = await FilmsDB.getFilms({
+            $or: [
+                { status: { $exists: false } },
+                { status: null }
+            ]
+        });
         res.json({
             films,
         });

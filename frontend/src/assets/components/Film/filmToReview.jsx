@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import ReviewForm from '../Forms/reviewForm';
 
-export default function FilmToReview({director, title, genre, screener, status}){
+export default function FilmToReview({director, title, genre, screener, status, onReload}){
     return(
         <>
             <Container>
@@ -37,6 +37,7 @@ export default function FilmToReview({director, title, genre, screener, status})
                 genre={genre}
                 screener={screener}
                 status={status}
+                onReload={onReload}
                 />
                
             </Container>

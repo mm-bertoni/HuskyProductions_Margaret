@@ -3,18 +3,19 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useState} from "react";
 
-export default function ReviewForm({director, title, genre, screener}){
+export default function ReviewForm({director, title, genre, screener, onReload}){
     const [selected, setSelected] = useState("Not Reviewed"); // Default is hasnt been reviewed.
     // Fix this 
     const handleSelection = (event) =>{
         setSelected(event.target.value);
     }
 
-    const onSubmit = (evt) => {
+    const onSubmit = async (evt) => {
         evt.preventDefault();
         console.log("Selection made:", selected);
         // Will put comms to Server here
-        fetch(`/api/updateFilmStatus`, {
+        try{
+            const res = await fetch(`/api/updateFilmStatus`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,9 +29,17 @@ export default function ReviewForm({director, title, genre, screener}){
             })
             
         });
-        console.log("Data Posted");
-        
-       
+         if(res.ok) {
+            console.log("Data Posted Successfully");
+            console.log("About to call onReload, which is" ,onReload);
+            onReload();  // Now actually call the function
+        } else {
+            console.error("Failed to update film status");
+        }
+    } catch (error) {
+        console.error("Error submitting form:", error);
+    }
+             
     }
 
     return(

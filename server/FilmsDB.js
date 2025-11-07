@@ -50,6 +50,7 @@ function filmsDB(){
       title: newTitle,
       genre: newGenre,
       screener: newScreener,
+      //status:null
     };
     // Connect
     const {client, films} = connect();
@@ -106,6 +107,7 @@ function filmsDB(){
     try {
       await films.updateOne(filter, update);
       console.log("Film status was updated");
+      //console.log("Updated Status: ", updateStatus);
     } catch (error){
       console.error("Error in updating the status", error);
     } finally {

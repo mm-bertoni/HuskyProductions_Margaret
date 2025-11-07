@@ -8,9 +8,10 @@ export default function FilmReviewList(){
     const [films, setFilms] = useState([]);
     const [loading, setLoading] = useState(true);
 
-
-    useEffect(()=>{
-        const reloadFilms = async () => {
+    const reloadFilms = async () => {
+        //console.log("reloadFilms triggered");
+        // Testing
+        setLoading(true);
         const res = await fetch(`/api/films`);
         console.log("What is res gettting", res);
         if(!res.ok){
@@ -20,12 +21,15 @@ export default function FilmReviewList(){
 
         } 
             const data = await res.json();
-            console.log("Full data received:", data);
+            //console.log("Full data received:", data);
             setFilms(data.films || []); // Defaults to empty array if issue
             setLoading(false);
 
 
         };
+
+    useEffect(()=>{
+        
         reloadFilms();
 
     },[]);
@@ -40,13 +44,16 @@ export default function FilmReviewList(){
             genre={film.genre}
             screener={film.screener}
             status={film.status}
+            onReload={reloadFilms}
+            // Test
+           
             />
         );
 
     }
-    //useEffect(()=>{})
+
     // Diagnostic log just before render to catch non-array types
-    console.log('films before render:', films, 'isArray:', Array.isArray(films), 'toString:', Object.prototype.toString.call(films));
+    //console.log('films before render:', films, 'isArray:', Array.isArray(films), 'toString:', Object.prototype.toString.call(films));
 
     if(loading){
         return(
