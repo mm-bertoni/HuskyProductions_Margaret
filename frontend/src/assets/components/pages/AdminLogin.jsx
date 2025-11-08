@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/esm/Container";
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/AdminLogin.css'
 
 const AdminLogin = () => {
   const [username, setUsername] = useState('');
@@ -36,10 +37,10 @@ const AdminLogin = () => {
 
   return (
     <div style={{ maxWidth: '400px', margin: '100px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-      <h2 style={{ textAlign: 'center' }}>Admin Login</h2>
+      <h2 style={{ textAlign: 'center', color: 'white' }}>Admin Login</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '15px' }}>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Username:</label>
+          <label style={{ display: 'block', marginBottom: '5px', color:'white' }}>Username:</label>
           <input
             type="text"
             value={username}

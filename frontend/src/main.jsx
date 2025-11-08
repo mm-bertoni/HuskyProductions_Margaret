@@ -8,7 +8,7 @@ import IndexPage from "./assets/components/pages/IndexPage";
 import FilmSubmissionPage from "./assets/components/pages/filmSubmissionPage";
 import TicketPage from "./assets/components/pages/TicketPage";
 import AdminTicketList from "./assets/components/pages/AdminTicketList";
-import AdminLogin from "./assets/components/AdminLogin";
+import AdminLogin from "./assets/components/pages/AdminLogin";
 import Footer from "./assets/components/Footer";
 import FilmAdminPage from './assets/components/pages/filmAdminPage';
 

@@ -96,7 +96,7 @@ export default function TicketForm({ isOpen, onClose, editTicket, onUpdate }) {
   const formContent = (
     <Form onSubmit={onSubmit}>
       <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Label>Name</Form.Label>
+        <Form.Label className="text-white">Name</Form.Label>
         <Form.Control
           type="text"
           placeholder="Enter your name"
@@ -107,16 +107,16 @@ export default function TicketForm({ isOpen, onClose, editTicket, onUpdate }) {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Number of Tickets</Form.Label>
+        <Form.Label className="text-white">Number of Tickets</Form.Label>
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Button variant="secondary" type="button" onClick={handleDecrease}>−</Button>
-          <span>{ticketData.numTickets}</span>
+          <span className="text-white">{ticketData.numTickets}</span>
           <Button variant="secondary" type="button" onClick={handleIncrease}>+</Button>
         </div>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicTotal">
-        <Form.Label>Total Cost</Form.Label>
+        <Form.Label className="text-white">Total Cost</Form.Label>
         <Form.Control type="text" value={`$${ticketData.totalCost}`} readOnly />
       </Form.Group>
 
