@@ -10,7 +10,7 @@ import TicketPage from "./assets/components/pages/TicketPage";
 import AdminTicketList from "./assets/components/pages/AdminTicketList";
 import AdminLogin from "./assets/components/pages/AdminLogin";
 import Footer from "./assets/components/Footer";
-import FilmAdminPage from './assets/components/pages/filmAdminPage';
+import FilmAdminPage from   './assets/components/pages/filmAdminPage';
 
 const container = document.getElementById("root");
 const root = createRoot(container);
