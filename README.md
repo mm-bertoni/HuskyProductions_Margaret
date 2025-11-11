@@ -45,6 +45,13 @@ Ticket admin can edit or delete ticket purchases here, and view total revenue.
 4. Upon successful login, you will see all the films available to review: ![Film Review Page](frontend/src/assets/images/screenshots/filmsToReview.png)
 5. If you refresh the page manually, it will log you out
 
+## Instructions for Ticket Admin Mode
+1. Add /ticketAdmin to the end of the homepage url.
+2. You will be redirected to the admin login page.
+3. Type your credentials. Pre-configured username:admin; password:admin123
+4. Once you login, you'll be redirected to the ticket list where you can see the total revenue, no. of tickets, and can edit or delete entries
+5. There is a refresh button to reload the data, and logout button to logout.
+
 ## Tools used
 - React (frontend) 
 - Node.js (backend)
