@@ -24,6 +24,8 @@ app.use("/api/tickets", ticketsRouter);
 
 app.use('/api/auth', authRoutes);
 
+// Shoun not it have some routes for login same goes for frontend
+
 /* Film Routes */
 app.use("/api/", filmRouter);
 app.use("/api/", filmCountRouter);
